@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Melvin Castillo\Sistemas\WsSistemaInterno\WsSiopel\WsSiopelPublish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>04/23/2018 15:46:05</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>04/23/2018 15:46:05</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>07/23/2018 13:47:24</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>07/23/2018 13:47:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>11/30/2016 16:07:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>12/07/2016 11:45:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>12/07/2016 11:50:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>12/06/2016 15:15:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>12/07/2016 11:49:10</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>12/07/2016 11:50:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>12/06/2016 15:09:52</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>06/15/2015 02:06:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/WsSiopel.dll">
+      <publishTime>07/23/2018 13:47:18</publishTime>
+    </File>
+    <File Include="bin/WsSiopel.pdb">
+      <publishTime>07/23/2018 13:47:18</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>07/02/2018 16:11:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>07/02/2018 16:11:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>07/02/2018 16:11:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css.map">
+      <publishTime>07/02/2018 16:11:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>07/02/2018 16:11:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>07/02/2018 16:11:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>07/02/2018 16:11:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>07/02/2018 16:11:30</publishTime>
+    </File>
+    <File Include="Content/Datatables/dataTables.bootstrap.css">
+      <publishTime>07/02/2018 16:11:33</publishTime>
+    </File>
+    <File Include="Content/Datatables/dataTables.bootstrap.min.css">
+      <publishTime>07/02/2018 16:11:32</publishTime>
+    </File>
+    <File Include="Content/Datatables/dataTables.bootstrap4.css">
+      <publishTime>07/02/2018 16:11:32</publishTime>
+    </File>
+    <File Include="Content/Datatables/dataTables.bootstrap4.min.css">
+      <publishTime>07/02/2018 16:11:32</publishTime>
+    </File>
+    <File Include="Content/Datatables/jquery.dataTables.css">
+      <publishTime>07/02/2018 16:11:31</publishTime>
+    </File>
+    <File Include="Content/Datatables/jquery.dataTables.min.css">
+      <publishTime>07/02/2018 16:11:31</publishTime>
+    </File>
+    <File Include="Content/Datatables/jquery.dataTables_themeroller.css">
+      <publishTime>07/02/2018 16:11:31</publishTime>
+    </File>
+    <File Include="Content/images/favicon.ico">
+      <publishTime>07/02/2018 16:11:31</publishTime>
+    </File>
+    <File Include="Content/images/Sorting icons.psd">
+      <publishTime>07/02/2018 16:11:31</publishTime>
+    </File>
+    <File Include="Content/images/sort_asc.png">
+      <publishTime>07/02/2018 16:11:31</publishTime>
+    </File>
+    <File Include="Content/images/sort_asc_disabled.png">
+      <publishTime>07/02/2018 16:11:31</publishTime>
+    </File>
+    <File Include="Content/images/sort_both.png">
+      <publishTime>07/02/2018 16:11:31</publishTime>
+    </File>
+    <File Include="Content/images/sort_desc.png">
+      <publishTime>07/02/2018 16:11:31</publishTime>
+    </File>
+    <File Include="Content/images/sort_desc_disabled.png">
+      <publishTime>07/02/2018 16:11:31</publishTime>
+    </File>
+    <File Include="css/bootstrap-grid.css">
+      <publishTime>04/25/2018 15:17:08</publishTime>
+    </File>
+    <File Include="css/bootstrap-grid.min.css">
+      <publishTime>04/25/2018 15:17:08</publishTime>
+    </File>
+    <File Include="css/bootstrap-reboot.css">
+      <publishTime>04/25/2018 15:17:08</publishTime>
+    </File>
+    <File Include="css/bootstrap-reboot.min.css">
+      <publishTime>04/25/2018 15:17:08</publishTime>
+    </File>
+    <File Include="css/bootstrap-responsive.css">
+      <publishTime>04/25/2018 15:17:08</publishTime>
+    </File>
+    <File Include="css/bootstrap-responsive.min.css">
+      <publishTime>04/25/2018 15:17:08</publishTime>
+    </File>
+    <File Include="css/bootstrap.css">
+      <publishTime>04/25/2018 15:17:08</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css">
+      <publishTime>04/25/2018 15:17:08</publishTime>
+    </File>
+    <File Include="css/bootstrap.min2.css">
+      <publishTime>04/25/2018 15:17:09</publishTime>
+    </File>
+    <File Include="css/font-awesome.min2.css">
+      <publishTime>04/25/2018 15:17:08</publishTime>
+    </File>
+    <File Include="css/select2.css">
+      <publishTime>04/25/2018 15:17:08</publishTime>
+    </File>
+    <File Include="css/style.css">
+      <publishTime>04/25/2018 15:17:08</publishTime>
+    </File>
+    <File Include="css/StyleSheet1.css">
+      <publishTime>04/25/2018 15:17:08</publishTime>
+    </File>
+    <File Include="css/style__not-minified.css">
+      <publishTime>04/25/2018 15:17:08</publishTime>
+    </File>
+    <File Include="css/themes.css">
+      <publishTime>04/25/2018 15:17:08</publishTime>
+    </File>
+    <File Include="css/themes__not-minified.css">
+      <publishTime>04/25/2018 15:17:08</publishTime>
+    </File>
+    <File Include="font/fontawesome-webfont.eot">
+      <publishTime>04/25/2018 16:07:13</publishTime>
+    </File>
+    <File Include="font/fontawesome-webfont.svg">
+      <publishTime>04/25/2018 16:07:13</publishTime>
+    </File>
+    <File Include="font/fontawesome-webfont.ttf">
+      <publishTime>04/25/2018 16:07:13</publishTime>
+    </File>
+    <File Include="font/fontawesome-webfont.woff">
+      <publishTime>04/25/2018 16:07:13</publishTime>
+    </File>
+    <File Include="font/FontAwesome.otf">
+      <publishTime>04/25/2018 16:07:13</publishTime>
+    </File>
+    <File Include="font/glyphicons-halflings-regular.woff">
+      <publishTime>04/25/2018 16:07:13</publishTime>
+    </File>
+    <File Include="font/glyphicons-regular.eot">
+      <publishTime>04/25/2018 16:07:13</publishTime>
+    </File>
+    <File Include="font/glyphicons-regular.otf">
+      <publishTime>04/25/2018 16:07:13</publishTime>
+    </File>
+    <File Include="font/glyphicons-regular.svg">
+      <publishTime>04/25/2018 16:07:13</publishTime>
+    </File>
+    <File Include="font/glyphicons-regular.ttf">
+      <publishTime>04/25/2018 16:07:13</publishTime>
+    </File>
+    <File Include="font/glyphicons-regular.woff">
+      <publishTime>04/25/2018 16:07:13</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>07/02/2018 16:11:30</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>07/02/2018 16:11:30</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>07/02/2018 16:11:30</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>07/02/2018 16:11:30</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>07/02/2018 16:11:29</publishTime>
+    </File>
+    <File Include="js/application.js">
+      <publishTime>04/25/2018 15:15:24</publishTime>
+    </File>
+    <File Include="js/application.min.js">
+      <publishTime>04/25/2018 15:15:24</publishTime>
+    </File>
+    <File Include="js/bootstrap.js">
+      <publishTime>04/25/2018 15:15:24</publishTime>
+    </File>
+    <File Include="js/bootstrap.min.js">
+      <publishTime>04/25/2018 15:15:24</publishTime>
+    </File>
+    <File Include="js/demonstration.js">
+      <publishTime>04/25/2018 15:15:24</publishTime>
+    </File>
+    <File Include="js/demonstration.min.js">
+      <publishTime>04/25/2018 15:15:24</publishTime>
+    </File>
+    <File Include="js/desktop.ini">
+      <publishTime>04/25/2018 15:15:24</publishTime>
+    </File>
+    <File Include="js/eakroko.js">
+      <publishTime>04/25/2018 15:15:24</publishTime>
+    </File>
+    <File Include="js/eakroko.min.js">
+      <publishTime>04/25/2018 15:15:24</publishTime>
+    </File>
+    <File Include="js/jquery-latest.js">
+      <publishTime>04/25/2018 15:15:24</publishTime>
+    </File>
+    <File Include="js/jquery.min.js">
+      <publishTime>07/20/2017 13:17:22</publishTime>
+    </File>
+    <File Include="js/jquery.min2.js">
+      <publishTime>04/25/2018 15:15:24</publishTime>
+    </File>
+    <File Include="js/jquery3.2.1.min.js">
+      <publishTime>04/25/2018 15:15:24</publishTime>
+    </File>
+    <File Include="js/jquerycopia1.min.js">
+      <publishTime>04/25/2018 15:15:24</publishTime>
+    </File>
+    <File Include="js/notify.min.js">
+      <publishTime>04/25/2018 15:15:24</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/as3/desktop.ini">
+      <publishTime>06/17/2017 09:26:40</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/as3/lib/AlivePDF.swc">
+      <publishTime>06/17/2017 09:26:40</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/as3/lib/desktop.ini">
+      <publishTime>06/17/2017 09:26:40</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/as3/ZeroClipboard.as">
+      <publishTime>06/17/2017 09:26:40</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/as3/ZeroClipboardPdf.as">
+      <publishTime>06/17/2017 09:26:40</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/ColReorder.min.js">
+      <publishTime>06/17/2017 09:26:40</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/ColReorderWithResize.js">
+      <publishTime>06/17/2017 09:26:40</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/ColVis.js">
+      <publishTime>06/17/2017 09:26:40</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/ColVis.min.js">
+      <publishTime>09/11/2017 14:14:09</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/dataTables.scroller.min.js">
+      <publishTime>06/17/2017 09:26:40</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/datatables11015.min.js">
+      <publishTime>09/11/2017 14:12:35</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/dataTables11016.js">
+      <publishTime>01/10/2018 16:56:30</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/demo.txt">
+      <publishTime>06/17/2017 09:26:40</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/desktop.ini">
+      <publishTime>06/17/2017 09:26:40</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/FixedColumns.min.js">
+      <publishTime>06/17/2017 09:26:40</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/FixedColumns.min.min.js">
+      <publishTime>06/17/2017 09:26:40</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/jquery.dataTables.columnFilter.js">
+      <publishTime>06/17/2017 09:26:40</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/jquery.dataTables.columnFilter.min.js">
+      <publishTime>06/17/2017 09:26:40</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/jquery.dataTables.grouping.js">
+      <publishTime>06/17/2017 09:26:40</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/jquery.dataTables.js">
+      <publishTime>06/17/2017 09:26:40</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/jquery.dataTables.min.js">
+      <publishTime>06/17/2017 09:26:40</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/swf/copy_csv_xls.swf">
+      <publishTime>06/17/2017 09:26:40</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/swf/copy_csv_xls_pdf.swf">
+      <publishTime>10/23/2017 11:41:20</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/swf/desktop.ini">
+      <publishTime>06/17/2017 09:26:40</publishTime>
+    </File>
+    <File Include="js/plugins/datatable/TableTools.min.js">
+      <publishTime>10/06/2017 11:02:38</publishTime>
+    </File>
+    <File Include="js/select2.min.js">
+      <publishTime>04/25/2018 15:15:24</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>07/02/2018 16:11:33</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>07/23/2018 13:47:19</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>07/02/2018 16:11:29</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>07/02/2018 16:11:29</publishTime>
+    </File>
+    <File Include="Scripts/dataTables.bootstrap.js">
+      <publishTime>07/02/2018 16:11:32</publishTime>
+    </File>
+    <File Include="Scripts/dataTables.bootstrap.min.js">
+      <publishTime>07/02/2018 16:11:32</publishTime>
+    </File>
+    <File Include="Scripts/dataTables.bootstrap4.js">
+      <publishTime>07/02/2018 16:11:32</publishTime>
+    </File>
+    <File Include="Scripts/dataTables.bootstrap4.min.js">
+      <publishTime>07/02/2018 16:11:32</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.12.4.js">
+      <publishTime>07/02/2018 16:11:21</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.12.4.min.js">
+      <publishTime>07/02/2018 16:11:21</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.12.4.min.map">
+      <publishTime>07/02/2018 16:11:21</publishTime>
+    </File>
+    <File Include="Scripts/jquery.dataTables.js">
+      <publishTime>07/02/2018 16:11:31</publishTime>
+    </File>
+    <File Include="Scripts/jquery.dataTables.min.js">
+      <publishTime>07/02/2018 16:11:31</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.LoginResponse.datasource">
+      <publishTime>07/23/2018 13:39:49</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.LogoutResponse.datasource">
+      <publishTime>07/23/2018 13:39:49</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.OrdenActualizarConsumidosResponse.datasource">
+      <publishTime>07/23/2018 13:39:49</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.OrdenAsignarResponse.datasource">
+      <publishTime>07/23/2018 13:39:49</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.OrdenConsultarConsumidosResponse.datasource">
+      <publishTime>07/23/2018 13:39:49</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.OrdenConsultarDatosResponse.datasource">
+      <publishTime>07/23/2018 13:39:49</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.OrdenConsultarMovimientosResponse.datasource">
+      <publishTime>07/23/2018 13:39:49</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.OrdenConsultarOrdenesResponse.datasource">
+      <publishTime>07/23/2018 13:39:49</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.OrdenEliminarResponse.datasource">
+      <publishTime>07/23/2018 13:39:49</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.OrdenModificarResponse.datasource">
+      <publishTime>07/23/2018 13:39:49</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.OrdenNovedadesResponse.datasource">
+      <publishTime>07/23/2018 13:39:49</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.OrdenNuevaResponse.datasource">
+      <publishTime>07/23/2018 13:39:49</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.OrdenUsarNovedadesResponse.datasource">
+      <publishTime>07/23/2018 13:39:49</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.StillAliveResponse.datasource">
+      <publishTime>07/23/2018 13:39:49</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.TDatosConsultaOrden.datasource">
+      <publishTime>07/23/2018 13:39:49</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.TDatosConsumidosOrden.datasource">
+      <publishTime>07/23/2018 13:39:48</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.TDatosEstadoTrading.datasource">
+      <publishTime>07/23/2018 13:39:48</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.TDatosMovimientoOrden.datasource">
+      <publishTime>07/23/2018 13:39:48</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.TDatosNovedadesOrden.datasource">
+      <publishTime>07/23/2018 13:39:48</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.TIdOrden.datasource">
+      <publishTime>07/23/2018 13:39:49</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.TradingConsultarEstadoResponse.datasource">
+      <publishTime>07/23/2018 13:39:49</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.TradingNuevoResponse.datasource">
+      <publishTime>07/23/2018 13:39:49</publishTime>
+    </File>
+    <File Include="Service References/WsSIOPEL/WsSiopel.WsSIOPEL.TWSResponse.datasource">
+      <publishTime>07/23/2018 13:39:48</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>07/23/2018 13:41:21</publishTime>
+    </File>
+    <File Include="wsSiopel.aspx">
+      <publishTime>07/23/2018 13:47:02</publishTime>
+    </File>
+    <File Include="wsSiopel2.aspx">
+      <publishTime>07/23/2018 09:29:47</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

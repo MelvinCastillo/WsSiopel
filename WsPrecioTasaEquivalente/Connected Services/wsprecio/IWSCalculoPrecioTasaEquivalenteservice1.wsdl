@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="urn:WSCalculoPrecioTasaEquivalenteIntf" name="IWSCalculoPrecioTasaEquivalenteservice" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:WSCalculoPrecioTasaEquivalenteIntf">
+      <xs:complexType name="TCalculoPrecioTasa">
+        <xs:sequence>
+          <xs:element name="ColaRespuesta" type="xs:string" />
+          <xs:element name="TimeOut" type="xs:int" />
+          <xs:element name="Mercado" type="xs:string" />
+          <xs:element name="TipoIdTitulo" type="xs:string" />
+          <xs:element name="IdTitulo" type="xs:string" />
+          <xs:element name="TipoDeNegociacion" type="xs:string" />
+          <xs:element name="PlazoDeIda" type="xs:int" />
+          <xs:element name="PlazoDeVuelta" type="xs:int" />
+          <xs:element name="PrecioOTasa" type="xs:double" />
+          <xs:element name="Moneda" type="xs:string" />
+          <xs:element name="EnteLiquidador" type="xs:string" />
+          <xs:element name="FechaDeProceso" type="xs:dateTime" />
+          <xs:element name="TNE_FechaDeEmision" type="xs:dateTime" />
+          <xs:element name="TNE_FechaDeVencimiento" type="xs:dateTime" />
+          <xs:element name="TNE_PeriodicidadDePago" type="xs:string" />
+          <xs:element name="TNE_ModalidadDePago" type="xs:string" />
+          <xs:element name="TNE_PeriodicidadDeReinversion" type="xs:string" />
+          <xs:element name="TNE_ModalidadDeReinversion" type="xs:string" />
+          <xs:element name="TNE_TasaFacial" type="xs:double" />
+          <xs:element name="TNE_Premio" type="xs:double" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TWSMensajeRespuesta">
+        <xs:sequence>
+          <xs:element name="Codigo" type="xs:string" />
+          <xs:element name="Mensaje" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="CalcularPrecioTasaEquivalente0Request">
+    <part name="oCalculoPrecioTasa" type="ns1:TCalculoPrecioTasa" />
+  </message>
+  <message name="CalcularPrecioTasaEquivalente0Response">
+    <part name="Moneda" type="xs:string" />
+    <part name="PrecioTasaEquivalente" type="xs:double" />
+    <part name="return" type="ns1:TWSMensajeRespuesta" />
+  </message>
+  <portType name="IWSCalculoPrecioTasaEquivalente">
+    <operation name="CalcularPrecioTasaEquivalente">
+      <input message="tns:CalcularPrecioTasaEquivalente0Request" />
+      <output message="tns:CalcularPrecioTasaEquivalente0Response" />
+    </operation>
+  </portType>
+  <binding name="IWSCalculoPrecioTasaEquivalentebinding" type="tns:IWSCalculoPrecioTasaEquivalente">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="CalcularPrecioTasaEquivalente">
+      <soap:operation soapAction="urn:WSCalculoPrecioTasaEquivalenteIntf-IWSCalculoPrecioTasaEquivalente#CalcularPrecioTasaEquivalente" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:WSCalculoPrecioTasaEquivalenteIntf-IWSCalculoPrecioTasaEquivalente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:WSCalculoPrecioTasaEquivalenteIntf-IWSCalculoPrecioTasaEquivalente" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="IWSCalculoPrecioTasaEquivalenteservice">
+    <port name="IWSCalculoPrecioTasaEquivalentePort" binding="tns:IWSCalculoPrecioTasaEquivalentebinding">
+      <soap:address location="http://52.205.251.74/PrecioTasaEquivalente/PrecioTasaEquivalente.dll/soap/IWSCalculoPrecioTasaEquivalente" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="urn:wsSistemaInternoSiopelIntf" name="IwsSistemaInternoSiopelservice" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema xmlns="urn:wsSistemaInternoSiopelIntf" targetNamespace="urn:wsSistemaInternoSiopelIntf">
+      <xs:complexType name="TWSResponse">
+        <xs:sequence>
+          <xs:element name="Code" type="xs:int" />
+          <xs:element name="RespMessage" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TArrayOfIdOrden">
+        <xs:complexContent mixed="false">
+          <xs:restriction base="soapenc:Array">
+            <xs:sequence />
+            <xs:attribute xmlns:n1="http://schemas.xmlsoap.org/wsdl/" n1:arrayType="ns1:TIdOrden[]" ref="soapenc:arrayType" />
+          </xs:restriction>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TIdOrden">
+        <xs:sequence>
+          <xs:element name="Tipo" type="xs:string" />
+          <xs:element name="Numero" type="xs:double" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TDatosOrdenNueva">
+        <xs:sequence>
+          <xs:element name="Comitente" type="xs:string" />
+          <xs:element name="CantidadOrden" type="xs:double" />
+          <xs:element name="EstadoOrden" type="xs:string" />
+          <xs:element name="Observaciones" type="xs:string" />
+          <xs:element name="CompraVenta" type="xs:string" />
+          <xs:element name="Especie" type="xs:string" />
+          <xs:element name="PlazoVuelta" type="xs:int" />
+          <xs:element name="FechaOrden" type="xs:string" />
+          <xs:element name="HoraOrden" type="xs:string" />
+          <xs:element name="CodigoRueda" type="xs:string" />
+          <xs:element name="CantidadMinima" type="xs:double" />
+          <xs:element name="TipoLote" type="xs:string" />
+          <xs:element name="Enteliq" type="xs:string" />
+          <xs:element name="TipoLiq" type="xs:string" />
+          <xs:element name="TipoOpOrigen" type="xs:string" />
+          <xs:element name="PermisoCambio" type="xs:string" />
+          <xs:element name="OrdenTipo" type="xs:string" />
+          <xs:element name="OperadorSIOPEL" type="xs:string" />
+          <xs:element name="GrupoEconomico" type="xs:string" />
+          <xs:element name="DuenioCAP" type="xs:string" />
+          <xs:element name="ValorCAP" type="xs:double" />
+          <xs:element name="PrecioMinimo" type="xs:double" />
+          <xs:element name="PrecioMaximo" type="xs:double" />
+          <xs:element name="DiasValidez" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TDatosOrdenModificacion">
+        <xs:sequence>
+          <xs:element name="OrdenTipo" type="xs:string" />
+          <xs:element name="OrdenNro" type="xs:double" />
+          <xs:element name="Cantidad" type="xs:double" />
+          <xs:element name="GrupoEconomico" type="xs:string" />
+          <xs:element name="DuenioCAP" type="xs:string" />
+          <xs:element name="ValorCAP" type="xs:double" />
+          <xs:element name="PrecioMinimo" type="xs:double" />
+          <xs:element name="PrecioMaximo" type="xs:double" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TDatosConsultaOrden">
+        <xs:sequence>
+          <xs:element name="Destinatario" type="xs:string" />
+          <xs:element name="OrdenTipo" type="xs:string" />
+          <xs:element name="NroOrden" type="xs:double" />
+          <xs:element name="Rueda" type="xs:string" />
+          <xs:element name="Especie" type="xs:string" />
+          <xs:element name="Tipo" type="xs:string" />
+          <xs:element name="Divulgacion" type="xs:int" />
+          <xs:element name="Vigencia" type="xs:int" />
+          <xs:element name="EnteLiquidador" type="xs:string" />
+          <xs:element name="TipoLiquidacion" type="xs:string" />
+          <xs:element name="Cantidad" type="xs:double" />
+          <xs:element name="CantidadMin" type="xs:double" />
+          <xs:element name="TipoOpOrigen" type="xs:string" />
+          <xs:element name="ClaseOferta" type="xs:string" />
+          <xs:element name="Cliente" type="xs:string" />
+          <xs:element name="TipoOpDestino" type="xs:string" />
+          <xs:element name="ClienteDestino" type="xs:string" />
+          <xs:element name="PlazoVuelta" type="xs:int" />
+          <xs:element name="EstadoOrden" type="xs:string" />
+          <xs:element name="Texto" type="xs:string" />
+          <xs:element name="PrecioXCta" type="xs:double" />
+          <xs:element name="GrupoEconomico" type="xs:string" />
+          <xs:element name="ValorCAP" type="xs:double" />
+          <xs:element name="DuenioCAP" type="xs:string" />
+          <xs:element name="PrecioMinimo" type="xs:double" />
+          <xs:element name="PrecioMaximo" type="xs:double" />
+          <xs:element name="DiasValidez" type="xs:int" />
+          <xs:element name="ConsumidoAcumulado" type="xs:double" />
+          <xs:element name="EjecutadoAcumulado" type="xs:double" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TDatosConsumidosOrden">
+        <xs:sequence>
+          <xs:element name="OrdenTipo" type="xs:string" />
+          <xs:element name="NroOrden" type="xs:double" />
+          <xs:element name="ConsumidoAcumulado" type="xs:double" />
+          <xs:element name="EjecutadoAcumulado" type="xs:double" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TDatosMovimientosOrden">
+        <xs:complexContent mixed="false">
+          <xs:restriction base="soapenc:Array">
+            <xs:sequence />
+            <xs:attribute xmlns:n1="http://schemas.xmlsoap.org/wsdl/" n1:arrayType="ns1:TDatosMovimientoOrden[]" ref="soapenc:arrayType" />
+          </xs:restriction>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TDatosMovimientoOrden">
+        <xs:sequence>
+          <xs:element name="SecuenciaOrden" type="xs:string" />
+          <xs:element name="OrdenTipo" type="xs:string" />
+          <xs:element name="OrdenNro" type="xs:double" />
+          <xs:element name="Estado" type="xs:string" />
+          <xs:element name="Accion" type="xs:string" />
+          <xs:element name="OpSiopel" type="xs:string" />
+          <xs:element name="Cantidad" type="xs:double" />
+          <xs:element name="ConsumidoAcumulado" type="xs:double" />
+          <xs:element name="EjecutadoAcumulado" type="xs:double" />
+          <xs:element name="Motivo" type="xs:string" />
+          <xs:element name="DatoAdicional" type="xs:string" />
+          <xs:element name="PrecioMinimo" type="xs:double" />
+          <xs:element name="PrecioMaximo" type="xs:double" />
+          <xs:element name="DiasValidez" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TDatosNovedadesOrdenes">
+        <xs:complexContent mixed="false">
+          <xs:restriction base="soapenc:Array">
+            <xs:sequence />
+            <xs:attribute xmlns:n1="http://schemas.xmlsoap.org/wsdl/" n1:arrayType="ns1:TDatosNovedadesOrden[]" ref="soapenc:arrayType" />
+          </xs:restriction>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TDatosNovedadesOrden">
+        <xs:sequence>
+          <xs:element name="OrdenTipo" type="xs:string" />
+          <xs:element name="OrdenNro" type="xs:double" />
+          <xs:element name="Eventos" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TDatosAltaTrading">
+        <xs:sequence>
+          <xs:element name="Especie" type="xs:string" />
+          <xs:element name="PlazoVuelta" type="xs:int" />
+          <xs:element name="Destinatario" type="xs:string" />
+          <xs:element name="Cantidad" type="xs:double" />
+          <xs:element name="Precio" type="xs:double" />
+          <xs:element name="TipoOpOr" type="xs:string" />
+          <xs:element name="TipoOpDe" type="xs:string" />
+          <xs:element name="EnteLiq" type="xs:string" />
+          <xs:element name="TipoLiq" type="xs:string" />
+          <xs:element name="Rueda" type="xs:string" />
+          <xs:element name="ComitenteOrigen" type="xs:string" />
+          <xs:element name="ComitenteContra" type="xs:string" />
+          <xs:element name="IdAdicionalContra" type="xs:int" />
+          <xs:element name="IdAdicional2Contra" type="xs:int" />
+          <xs:element name="VigenciaTasa" type="xs:int" />
+          <xs:element name="IndCorreccion" type="xs:int" />
+          <xs:element name="PrecioIdaSelic" type="xs:double" />
+          <xs:element name="Interes" type="xs:double" />
+          <xs:element name="Total" type="xs:double" />
+          <xs:element name="TotalDolar" type="xs:double" />
+          <xs:element name="PlazoCobertura" type="xs:int" />
+          <xs:element name="PorcAfecSettle" type="xs:double" />
+          <xs:element name="PorcAfecPrice" type="xs:double" />
+          <xs:element name="OrdenTipo" type="xs:string" />
+          <xs:element name="OrdenNro" type="xs:double" />
+          <xs:element name="Texto" type="xs:string" />
+          <xs:element name="TipoTrading" type="xs:string" />
+          <xs:element name="DatosTNE" type="ns1:TDatosTNE" />
+          <xs:element name="CuentaCliente" type="xs:string" />
+          <xs:element name="NomContraInt" type="xs:string" />
+          <xs:element name="NomCustodioInt" type="xs:string" />
+          <xs:element name="FechaConcertacion" type="xs:string" />
+          <xs:element name="HoraConcertacion" type="xs:string" />
+          <xs:element name="ValorIndice" type="xs:double" />
+          <xs:element name="EspecieGarantia" type="xs:string" />
+          <xs:element name="CantidadGarantia" type="xs:double" />
+          <xs:element name="PrecioGarantia" type="xs:double" />
+          <xs:element name="TasaEquiGarantia" type="xs:double" />
+          <xs:element name="PorcentajeGarantia" type="xs:double" />
+          <xs:element name="ValorizacionGarantia" type="xs:double" />
+          <xs:element name="ValorizacionFutura" type="xs:double" />
+          <xs:element name="ValorizacionDolarFutura" type="xs:double" />
+          <xs:element name="CodDemora" type="xs:string" />
+          <xs:element name="MotDemora" type="xs:string" />
+          <xs:element name="CompraVenta" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TDatosTNE">
+        <xs:sequence>
+          <xs:element name="FechaEmision" type="xs:string" />
+          <xs:element name="FechaVencimiento" type="xs:string" />
+          <xs:element name="PeriodicidadPago" type="xs:string" />
+          <xs:element name="ModalidadPago" type="xs:string" />
+          <xs:element name="PeriodicidadReinversion" type="xs:string" />
+          <xs:element name="ModalidadReinversion" type="xs:string" />
+          <xs:element name="TasaFacial" type="xs:double" />
+          <xs:element name="Premio" type="xs:double" />
+          <xs:element name="CodigoDeEmisor" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TDatosEstadoTrading">
+        <xs:sequence>
+          <xs:element name="Id" type="xs:string" />
+          <xs:element name="Estado" type="xs:string" />
+          <xs:element name="SecHost" type="xs:string" />
+          <xs:element name="CodRtaHost" type="xs:string" />
+          <xs:element name="MsgRtaHost" type="xs:string" />
+          <xs:element name="SecHostPata2" type="xs:string" />
+          <xs:element name="RelacionOperaciones" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="Login0Request">
+    <part name="Clave" type="xs:string" />
+  </message>
+  <message name="Login0Response">
+    <part name="return" type="ns1:TWSResponse" />
+  </message>
+  <message name="Logout1Request">
+    <part name="Sesion" type="xs:string" />
+  </message>
+  <message name="Logout1Response">
+    <part name="return" type="ns1:TWSResponse" />
+  </message>
+  <message name="StillAlive2Request">
+    <part name="Sesion" type="xs:string" />
+  </message>
+  <message name="StillAlive2Response">
+    <part name="return" type="ns1:TWSResponse" />
+  </message>
+  <message name="OrdenConsultarOrdenes3Request">
+    <part name="Sesion" type="xs:string" />
+    <part name="Rueda" type="xs:string" />
+    <part name="Especie" type="xs:string" />
+    <part name="TipoOperacion" type="xs:string" />
+    <part name="TipoOrden" type="xs:string" />
+    <part name="Ordenes" type="ns1:TArrayOfIdOrden" />
+  </message>
+  <message name="OrdenConsultarOrdenes3Response">
+    <part name="Ordenes" type="ns1:TArrayOfIdOrden" />
+    <part name="return" type="ns1:TWSResponse" />
+  </message>
+  <message name="OrdenNueva4Request">
+    <part name="Sesion" type="xs:string" />
+    <part name="Orden" type="ns1:TDatosOrdenNueva" />
+    <part name="IdOrden" type="ns1:TIdOrden" />
+  </message>
+  <message name="OrdenNueva4Response">
+    <part name="IdOrden" type="ns1:TIdOrden" />
+    <part name="return" type="ns1:TWSResponse" />
+  </message>
+  <message name="OrdenEliminar5Request">
+    <part name="Sesion" type="xs:string" />
+    <part name="OrdenTipo" type="xs:string" />
+    <part name="OrdenNro" type="xs:double" />
+  </message>
+  <message name="OrdenEliminar5Response">
+    <part name="return" type="ns1:TWSResponse" />
+  </message>
+  <message name="OrdenModificar6Request">
+    <part name="Sesion" type="xs:string" />
+    <part name="Orden" type="ns1:TDatosOrdenModificacion" />
+  </message>
+  <message name="OrdenModificar6Response">
+    <part name="return" type="ns1:TWSResponse" />
+  </message>
+  <message name="OrdenActualizarConsumidos7Request">
+    <part name="Sesion" type="xs:string" />
+    <part name="OrdenTipo" type="xs:string" />
+    <part name="OrdenNro" type="xs:double" />
+    <part name="CantAsignada" type="xs:double" />
+    <part name="CantEjecutada" type="xs:double" />
+  </message>
+  <message name="OrdenActualizarConsumidos7Response">
+    <part name="return" type="ns1:TWSResponse" />
+  </message>
+  <message name="OrdenAsignar8Request">
+    <part name="Sesion" type="xs:string" />
+    <part name="OrdenTipo" type="xs:string" />
+    <part name="OrdenNro" type="xs:double" />
+    <part name="Operador" type="xs:string" />
+  </message>
+  <message name="OrdenAsignar8Response">
+    <part name="return" type="ns1:TWSResponse" />
+  </message>
+  <message name="OrdenConsultarDatos9Request">
+    <part name="Sesion" type="xs:string" />
+    <part name="OrdenTipo" type="xs:string" />
+    <part name="OrdenNro" type="xs:double" />
+    <part name="Orden" type="ns1:TDatosConsultaOrden" />
+  </message>
+  <message name="OrdenConsultarDatos9Response">
+    <part name="Orden" type="ns1:TDatosConsultaOrden" />
+    <part name="return" type="ns1:TWSResponse" />
+  </message>
+  <message name="OrdenConsultarConsumidos10Request">
+    <part name="Sesion" type="xs:string" />
+    <part name="OrdenTipo" type="xs:string" />
+    <part name="OrdenNro" type="xs:double" />
+    <part name="Consumidos" type="ns1:TDatosConsumidosOrden" />
+  </message>
+  <message name="OrdenConsultarConsumidos10Response">
+    <part name="Consumidos" type="ns1:TDatosConsumidosOrden" />
+    <part name="return" type="ns1:TWSResponse" />
+  </message>
+  <message name="OrdenConsultarMovimientos11Request">
+    <part name="Sesion" type="xs:string" />
+    <part name="OrdenTipo" type="xs:string" />
+    <part name="OrdenNro" type="xs:double" />
+    <part name="Movimientos" type="ns1:TDatosMovimientosOrden" />
+  </message>
+  <message name="OrdenConsultarMovimientos11Response">
+    <part name="Movimientos" type="ns1:TDatosMovimientosOrden" />
+    <part name="return" type="ns1:TWSResponse" />
+  </message>
+  <message name="OrdenNovedades12Request">
+    <part name="Sesion" type="xs:string" />
+    <part name="Novedades" type="ns1:TDatosNovedadesOrdenes" />
+  </message>
+  <message name="OrdenNovedades12Response">
+    <part name="Novedades" type="ns1:TDatosNovedadesOrdenes" />
+    <part name="return" type="ns1:TWSResponse" />
+  </message>
+  <message name="OrdenUsarNovedades13Request">
+    <part name="Sesion" type="xs:string" />
+    <part name="Vigencia" type="xs:int" />
+  </message>
+  <message name="OrdenUsarNovedades13Response">
+    <part name="return" type="ns1:TWSResponse" />
+  </message>
+  <message name="TradingNuevo14Request">
+    <part name="Sesion" type="xs:string" />
+    <part name="DatosTrading" type="ns1:TDatosAltaTrading" />
+    <part name="Id" type="xs:string" />
+  </message>
+  <message name="TradingNuevo14Response">
+    <part name="Id" type="xs:string" />
+    <part name="return" type="ns1:TWSResponse" />
+  </message>
+  <message name="TradingConsultarEstado15Request">
+    <part name="Sesion" type="xs:string" />
+    <part name="Id" type="xs:string" />
+    <part name="DatosEstado" type="ns1:TDatosEstadoTrading" />
+  </message>
+  <message name="TradingConsultarEstado15Response">
+    <part name="DatosEstado" type="ns1:TDatosEstadoTrading" />
+    <part name="return" type="ns1:TWSResponse" />
+  </message>
+  <portType name="IwsSistemaInternoSiopel">
+    <operation name="Login">
+      <input message="tns:Login0Request" />
+      <output message="tns:Login0Response" />
+    </operation>
+    <operation name="Logout">
+      <input message="tns:Logout1Request" />
+      <output message="tns:Logout1Response" />
+    </operation>
+    <operation name="StillAlive">
+      <input message="tns:StillAlive2Request" />
+      <output message="tns:StillAlive2Response" />
+    </operation>
+    <operation name="OrdenConsultarOrdenes">
+      <input message="tns:OrdenConsultarOrdenes3Request" />
+      <output message="tns:OrdenConsultarOrdenes3Response" />
+    </operation>
+    <operation name="OrdenNueva">
+      <input message="tns:OrdenNueva4Request" />
+      <output message="tns:OrdenNueva4Response" />
+    </operation>
+    <operation name="OrdenEliminar">
+      <input message="tns:OrdenEliminar5Request" />
+      <output message="tns:OrdenEliminar5Response" />
+    </operation>
+    <operation name="OrdenModificar">
+      <input message="tns:OrdenModificar6Request" />
+      <output message="tns:OrdenModificar6Response" />
+    </operation>
+    <operation name="OrdenActualizarConsumidos">
+      <input message="tns:OrdenActualizarConsumidos7Request" />
+      <output message="tns:OrdenActualizarConsumidos7Response" />
+    </operation>
+    <operation name="OrdenAsignar">
+      <input message="tns:OrdenAsignar8Request" />
+      <output message="tns:OrdenAsignar8Response" />
+    </operation>
+    <operation name="OrdenConsultarDatos">
+      <input message="tns:OrdenConsultarDatos9Request" />
+      <output message="tns:OrdenConsultarDatos9Response" />
+    </operation>
+    <operation name="OrdenConsultarConsumidos">
+      <input message="tns:OrdenConsultarConsumidos10Request" />
+      <output message="tns:OrdenConsultarConsumidos10Response" />
+    </operation>
+    <operation name="OrdenConsultarMovimientos">
+      <input message="tns:OrdenConsultarMovimientos11Request" />
+      <output message="tns:OrdenConsultarMovimientos11Response" />
+    </operation>
+    <operation name="OrdenNovedades">
+      <input message="tns:OrdenNovedades12Request" />
+      <output message="tns:OrdenNovedades12Response" />
+    </operation>
+    <operation name="OrdenUsarNovedades">
+      <input message="tns:OrdenUsarNovedades13Request" />
+      <output message="tns:OrdenUsarNovedades13Response" />
+    </operation>
+    <operation name="TradingNuevo">
+      <input message="tns:TradingNuevo14Request" />
+      <output message="tns:TradingNuevo14Response" />
+    </operation>
+    <operation name="TradingConsultarEstado">
+      <input message="tns:TradingConsultarEstado15Request" />
+      <output message="tns:TradingConsultarEstado15Response" />
+    </operation>
+  </portType>
+  <binding name="IwsSistemaInternoSiopelbinding" type="tns:IwsSistemaInternoSiopel">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="Login">
+      <soap:operation soapAction="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel#Login" style="rpc" />
+      <input message="tns:Login0Request">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output message="tns:Login0Response">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="Logout">
+      <soap:operation soapAction="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel#Logout" style="rpc" />
+      <input message="tns:Logout1Request">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output message="tns:Logout1Response">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="StillAlive">
+      <soap:operation soapAction="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel#StillAlive" style="rpc" />
+      <input message="tns:StillAlive2Request">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output message="tns:StillAlive2Response">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="OrdenConsultarOrdenes">
+      <soap:operation soapAction="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel#OrdenConsultarOrdenes" style="rpc" />
+      <input message="tns:OrdenConsultarOrdenes3Request">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output message="tns:OrdenConsultarOrdenes3Response">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="OrdenNueva">
+      <soap:operation soapAction="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel#OrdenNueva" style="rpc" />
+      <input message="tns:OrdenNueva4Request">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output message="tns:OrdenNueva4Response">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="OrdenEliminar">
+      <soap:operation soapAction="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel#OrdenEliminar" style="rpc" />
+      <input message="tns:OrdenEliminar5Request">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output message="tns:OrdenEliminar5Response">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="OrdenModificar">
+      <soap:operation soapAction="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel#OrdenModificar" style="rpc" />
+      <input message="tns:OrdenModificar6Request">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output message="tns:OrdenModificar6Response">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="OrdenActualizarConsumidos">
+      <soap:operation soapAction="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel#OrdenActualizarConsumidos" style="rpc" />
+      <input message="tns:OrdenActualizarConsumidos7Request">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output message="tns:OrdenActualizarConsumidos7Response">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="OrdenAsignar">
+      <soap:operation soapAction="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel#OrdenAsignar" style="rpc" />
+      <input message="tns:OrdenAsignar8Request">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output message="tns:OrdenAsignar8Response">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="OrdenConsultarDatos">
+      <soap:operation soapAction="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel#OrdenConsultarDatos" style="rpc" />
+      <input message="tns:OrdenConsultarDatos9Request">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output message="tns:OrdenConsultarDatos9Response">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="OrdenConsultarConsumidos">
+      <soap:operation soapAction="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel#OrdenConsultarConsumidos" style="rpc" />
+      <input message="tns:OrdenConsultarConsumidos10Request">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output message="tns:OrdenConsultarConsumidos10Response">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="OrdenConsultarMovimientos">
+      <soap:operation soapAction="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel#OrdenConsultarMovimientos" style="rpc" />
+      <input message="tns:OrdenConsultarMovimientos11Request">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output message="tns:OrdenConsultarMovimientos11Response">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="OrdenNovedades">
+      <soap:operation soapAction="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel#OrdenNovedades" style="rpc" />
+      <input message="tns:OrdenNovedades12Request">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output message="tns:OrdenNovedades12Response">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="OrdenUsarNovedades">
+      <soap:operation soapAction="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel#OrdenUsarNovedades" style="rpc" />
+      <input message="tns:OrdenUsarNovedades13Request">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output message="tns:OrdenUsarNovedades13Response">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="TradingNuevo">
+      <soap:operation soapAction="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel#TradingNuevo" style="rpc" />
+      <input message="tns:TradingNuevo14Request">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output message="tns:TradingNuevo14Response">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="TradingConsultarEstado">
+      <soap:operation soapAction="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel#TradingConsultarEstado" style="rpc" />
+      <input message="tns:TradingConsultarEstado15Request">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output message="tns:TradingConsultarEstado15Response">
+        <soap:body use="encoded" namespace="urn:wsSistemaInternoSiopelIntf-IwsSistemaInternoSiopel" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="IwsSistemaInternoSiopelservice">
+    <port name="IwsSistemaInternoSiopelPort" binding="tns:IwsSistemaInternoSiopelbinding">
+      <soap:address location="http://ec2-52-205-251-74.compute-1.amazonaws.com/wsSistemaInternoSiopel/wsSistemaInternoSiopel.dll/soap/IwsSistemaInternoSiopel" />
+    </port>
+  </service>
+</definitions>
